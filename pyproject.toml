@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "myapp"
+version = "0.1.0"
+description = ""
+authors = ["Matt Rixman <MatrixManAtYrService@users.noreply.github.com>"]
+packages = [
+  { include = "myapp", from ="src"},
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+poetry = "poetry.console.application:main"
+myapp = "myapp.cli:main"
